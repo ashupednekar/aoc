@@ -38,6 +38,16 @@ func main(){
     return
   }
 
+  var similarity int32
+  for _, x := range(l1){
+    count := 0;
+    for _, y := range(l2){
+      if x == y {
+        count++
+      }
+    }
+    similarity = similarity + x * int32(count)
+  }
 
-
+  fmt.Println(similarity)
 }

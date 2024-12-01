@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -55,7 +56,7 @@ func main(){
 
   var total int32;
   for i := range(len(l1)){
-    total = total + (l2[i] - l1[i])
+    total = total + int32(math.Abs(float64(l2[i] - l1[i]))) 
   }
 
   fmt.Printf("total: %v\n", total)
